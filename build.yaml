@@ -1,0 +1,41 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main  # Replace with your main branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can choose a different runner if needed
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Replace with your Python version
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt  # Replace with your project's requirements file
+      working-directory: C:\Users\Arul Pandi\Desktop\travel_blog\templates
+
+    - name: Build your project
+      run: |
+        # Add commands to build your project (e.g., Flask, static site generator, etc.)
+        # For example:
+        # python build.py
+      working-directory: C:\Users\Arul Pandi\Desktop\travel_blog\templates
+
+    - name: Deploy to Hosting Service
+      run: |
+        # Add deployment commands here
+        # This depends on the hosting service you are using (e.g., Heroku, GitHub Pages, etc.)
+        # For example, for Heroku:
+        # heroku login -i
+        # heroku git:remote -a your-heroku-app-name
+        # git push heroku main
+      working-directory: C:\Users\Arul Pandi\Desktop\travel_blog\templates
