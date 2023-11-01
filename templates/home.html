@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Travel blog</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>Welcome to My Travel Blog</h1>
+	<a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">blog</a>
+</header>
+    <ul>
+	    <img src="{{url_for('static',filename='image/image1.jpg')}}"width="300"></a>
+        {% for post in posts %}
+		    
+            <li><a href="{{ url_for('post', index=loop.index0) }}">{{ post['title'] }}</a></li>
+		
+			
+			
+        {% endfor %}
+		<img src="{{url_for('static',filename='image/image2.jpg')}}"width="300">
+		 
+    </ul>
+	<a><img src="{{url_for('static',filename='image/image3.jpg')}}"width="300">
+	<a><img src="{{url_for('static',filename='image/image4.jpg')}}"width="300"height="250">
+	
+</body>
+<body>
+
+<body>
+    <div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.77824450853!2d2.264633798119612!3d48.85893843534506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sin!4v1698423837980!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d504861.71324608556!2d114.95837307265809!3d-8.669460527961677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd246bc2ab70d43%3A0x82feaae12f4ab48e!2sKuta%20Beach!5e0!3m2!1sen!2sin!4v1698424254897!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</body>
+<body>
+ <div class="social-sharing">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=YourPageURL" target="_blank" class="social-button facebook">
+            Share on Facebook<>
+        </a>
+
+        <a href="https://twitter.com/share?url=YourPageURL&text=YourPageTitle" target="_blank" class="social-button twitter">
+            Share on X <>
+        </a>
+
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=YourPageURL&title=YourPageTitle" target="_blank" class="social-button linkedin">
+            Share on LinkedIn<>
+        </a>
+    </div>
+	<footer>
+        &copy; 2023 My Travel Blog
+    </footer>
+</body>
+
+</html>
